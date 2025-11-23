@@ -1,2 +1,2 @@
-# portafolio
-pendiente de mejoras
+<<<<<<< HEAD
+>>>>>>> origin/master
