@@ -1,0 +1,64 @@
+.terminal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e1e1e;
+  height: 40px;
+  border-bottom: 2px solid #111;
+  padding: 0 16px;
+  color: #d4d4d4;
+  font-family: 'Fira Code', monospace;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: max-content;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close {
+  background: #ff5f56;
+}
+
+.minimize {
+  background: #ffbd2e;
+}
+
+.maximize {
+  background: #27c93f;
+}
+
+.dropdown {
+  background: #1b1b1b;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #333;
+  font-family: 'Fira Code', monospace;
+}
+
+.dropdown li {
+  padding: 6px 5px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.dropdown li:hover {
+  background: #333;
+}

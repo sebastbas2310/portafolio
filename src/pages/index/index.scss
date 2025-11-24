@@ -1,37 +1,30 @@
-:host {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
 .terminal {
   background: #0d0d0d;
-  color: #00ff99;
   padding: 20px;
-  width: 100%;
   min-height: 100vh;
   font-family: "Fira Code", monospace;
   font-size: 18px;
+  color: #00ff99;
 }
 
-.code {
+code {
+  display: block;
   white-space: pre-wrap;
-  overflow: hidden;
+  color: #00ff99;
 }
 
-/* Cursor estilo terminal */
+/* cursor */
 code::after {
   content: "";
   display: inline-block;
-  width: 10px;
+  width: 9px;
   height: 18px;
   background: #00ff99;
-  margin-left: 5px;
+  margin-left: 2px;
   animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
+  0%, 100% { opacity: 1; }
   50% { opacity: 0; }
-  100% { opacity: 1; }
 }

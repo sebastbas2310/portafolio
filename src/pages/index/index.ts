@@ -1,31 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Header } from '../../components/header/header';
 
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './index.html',
+  imports: [CommonModule , Header],
+  templateUrl:'./index.html',
   styleUrls: ['./index.scss']
 })
 export class IndexComponent {
 
-  fullText: string = ` hq
-    const me = {
-        name: "Sebastian Bermudez",
-        role: "Frontend Developer",
-        experience_years: 1,
-        skills: ["Angular", "TypeScript", "SCSS", "Node.js", Spring Boot"],
-        hobbies: ["Gaming", "Reading", "Traveling"],
-        contact: {}
-        ;
-   `;
+  fullText: string = `const me = {
+  name: "Sebastian Bermudez",
+  role: "Frontend Developer",
+  experience_years: 1,
+  skills: ["Angular", "TypeScript", "SCSS", "Node.js"]
+};`;
 
   displayText: string = "";
   index: number = 0;
 
+  constructor(private zone: NgZone) {}
+
   ngOnInit() {
-    this.typeEffect();
+    this.zone.runOutsideAngular(() => {
+      this.typeEffect();
+    });
   }
 
   typeEffect() {
